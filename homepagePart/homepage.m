@@ -157,9 +157,27 @@ K: email-question? % emailValidation
 K: last? % -personalInfo
 --
 
+: home_menu
+  "View Menu" generalButton ctx{ btn1 }
+  "Our Services" generalButton ctx{ btn2 }
+  "About Us" generalButton ctx{ btn3 }
+q{
+    <h3>Le Rainbow Chatbot</h3>
+    <p>
+        You can select any option below: 
+        <br> #{btn1}
+        <br> #{btn2}
+        <br> #{btn3}
+    </p>
+
+}q
+ ;
+
+
 Q: $_
 A: last? not % ${ this-question questions }
-A: last? % Thank you for your response! <br> You can select any option below: <br> ${ "View Menu" generalButton } <br> ${ "Our Services" generalButton} <br> ${ "About Us" generalButton}
+\ A: last? % Thank you for your response! <br> You can select any option below: <br> ${ "View Menu" generalButton } <br> ${ "Our Services" generalButton} <br> ${ "About Us" generalButton}
+A: last? % Thank you for your response! ${ home_menu }
 L: savetolog? % userName:${ userName },userEmail:${ userEmail },userMobileNumber:${ userMobileNumber },userDateOfBirth:${ userDateOfBirth },userEvent:${ userEvent },userHearFromWhere:${ userHearFromWhere } 
 C: email-question? % last-question userName!
 C: mobilenumber-question? % last-question userEmail!
@@ -183,16 +201,14 @@ K: -chatbotHomepage personalInfo
 --
 
 Q: No|no
-A: You can select any option below: <br> ${ "View Menu" generalButton } <br> ${ "Our Services" generalButton} <br> ${ "About Us" generalButton}
+A: ${ home_menu }
 K: -chatbotHomepage
 --
 end-room
 
 
 
-Q: Start the chatbot
-A: Before we start the conversation, I would like to ask your permission to collect your personal info. <br>${ "Yes" yesButton } ${ "No" noButton }
-K: chatbotHomepage
---
-
-
+\ Q: Start the chatbot
+\ A: Before we start the conversation, I would like to ask your permission to collect your personal info. <br>${ "Yes" yesButton } ${ "No" noButton }
+\ K: chatbotHomepage
+\ --

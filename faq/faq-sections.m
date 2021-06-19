@@ -9,11 +9,11 @@
 
 \ == Events
 : faq-events
-  "Back to all services" button ctx{ servicesBtn }
-  "Do you cater multiple meals for all-day events?" button ctx{ Btn1 }
-  "How many people can you cater to?" button ctx{ Btn2 }
-  "Are there special services which can improve my event?" button ctx{ Btn3 }
-  "How much space is required for buffet table set-up?" button ctx{ Btn4 }
+  "Back to all services" backButton ctx{ servicesBtn }
+  "Do you cater multiple meals for all-day events?" faqButton ctx{ Btn1 }
+  "How many people can you cater to?" faqButton ctx{ Btn2 }
+  "Are there special services which can improve my event?" faqButton ctx{ Btn3 }
+  "How much space is required for buffet table set-up?" faqButton ctx{ Btn4 }
 q{
     <h2>Events</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/DSC_3370-1-scaled.jpg" style="width:260px;">
@@ -38,14 +38,14 @@ A: ${ faq-events }
 
 \ == Meals
 : faq-meals
-  "Back to all services" button ctx{ servicesBtn }
-  "What is a Bento meal?" button ctx{ Btn1 }
-  "What is a Mini Buffet?" button ctx{ Btn2 }
-  "What is a Buffet Package?" button ctx{ Btn3 }
-  "Can I change or swap food items?" button ctx{ Btn4 }
-  "How much food should I order?" button ctx{ Btn5 }
-  "Can I split the main course into half rice and half noodles?" button ctx{ Btn6 }
-  "How long will the food last?" button ctx{ Btn7 }
+  "Back to all services" backButton ctx{ servicesBtn }
+  "What is a Bento meal?" faqButton ctx{ Btn1 }
+  "What is a Mini Buffet?" faqButton ctx{ Btn2 }
+  "What is a Buffet Package?" faqButton ctx{ Btn3 }
+  "Can I change or swap food items?" faqButton ctx{ Btn4 }
+  "How much food should I order?" faqButton ctx{ Btn5 }
+  "Can I split the main course into half rice and half noodles?" faqButton ctx{ Btn6 }
+  "How long will the food last?" faqButton ctx{ Btn7 }
 q{
     <h2>Meals</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2021/04/a1.jpg" style="width:260px;">
@@ -72,11 +72,11 @@ A: ${ faq-meals }
 
 \ == Value-Add Services
 : faq-valueadd
-  "Back to all services" button ctx{ servicesBtn }
-  "What is a Cocktail Canape?" button ctx{ Btn1 }
-  "What is a live cooking station?" button ctx{ Btn2 }
-  "Is there food tasting?" button ctx{ Btn3 }
-  "Can we arrange a site visit?" button ctx{ Btn4 }
+  "Back to all services" backButton ctx{ servicesBtn }
+  "What is a Cocktail Canape?" faqButton ctx{ Btn1 }
+  "What is a live cooking station?" faqButton ctx{ Btn2 }
+  "Is there food tasting?" faqButton ctx{ Btn3 }
+  "Can we arrange a site visit?" faqButton ctx{ Btn4 }
 q{
     <h2>Value-Add Services</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/LR-Wedding-Page-Banner-03-1.jpg" style="width:260px;">
@@ -100,10 +100,10 @@ A: ${ faq-valueadd }
 
 \ == Orders
 : faq-orders
-  "Back to all services" button ctx{ servicesBtn }
-  "How do I know if my order is confirmed?" button ctx{ Btn1 }
-  "How do I change my order?" button ctx{ Btn2 }
-  "Can I add additional pax after placing my order?" button ctx{ Btn3 }
+  "Back to all services" backButton ctx{ servicesBtn }
+  "How do I know if my order is confirmed?" faqButton ctx{ Btn1 }
+  "How do I change my order?" faqButton ctx{ Btn2 }
+  "Can I add additional pax after placing my order?" faqButton ctx{ Btn3 }
 q{
     <h2>Orders</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2021/04/lrgal-scaled.jpg" style="width:260px;">
@@ -126,11 +126,11 @@ A: ${ faq-orders }
 
 \ == Delivery
 : faq-delivery
-  "Back to all services" button ctx{ servicesBtn }
-  "What are the delivery charges?" button ctx{ Btn1 }
-  "What time will the collection be?" button ctx{ Btn2 }
-  "Will disposable cutlery be provided?" button ctx{ Btn3 }
-  "Is the eating time the same as the set up time?" button ctx{ Btn4 }
+  "Back to all services" backButton ctx{ servicesBtn }
+  "What are the delivery charges?" faqButton ctx{ Btn1 }
+  "What time will the collection be?" faqButton ctx{ Btn2 }
+  "Will disposable cutlery be provided?" faqButton ctx{ Btn3 }
+  "Is the eating time the same as the set up time?" faqButton ctx{ Btn4 }
 q{
     <h2>Delivery</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/DSC_3365-2-scaled.jpg" style="width:260px;">
@@ -154,9 +154,9 @@ A: ${ faq-delivery }
 
 \ == Payment
 : faq-payment
-  "Back to all services" button ctx{ servicesBtn }
-  "Are there other payment options?" button ctx{ Btn1 }
-  "Can I get an official invoice for my company?" button ctx{ Btn2 }
+  "Back to all services" backButton ctx{ servicesBtn }
+  "Are there other payment options?" faqButton ctx{ Btn1 }
+  "Can I get an official invoice for my company?" faqButton ctx{ Btn2 }
 q{
     <h2>Payment</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2021/04/lr4-scaled.jpg" style="width:260px;">

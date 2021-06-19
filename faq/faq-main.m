@@ -12,35 +12,35 @@ terra/chat/app
 terra/chat/log
 
 
-room: services-faq
+room: services_faq
 
 @: faq-whatis
 faq-whatis: what_is_a tell_me_about explain
 
 \ Questions by category
 \ Q - "Events"
-include ./faq/faq-qn-events.m
+include ./topics/faq/faq-qn-events.m
 
 \ Q - "Meals"
-include ./faq/faq-qn-meals.m
+include ./topics/faq/faq-qn-meals.m
 
 \ Q - "Value-Add Services"
-include ./faq/faq-qn-valueadd.m
+include ./topics/faq/faq-qn-valueadd.m
     
 \ Q - "Orders"
-include ./faq/faq-qn-orders.m
+include ./topics/faq/faq-qn-orders.m
     
 \ Q - "Delivery"
-include ./faq/faq-qn-delivery.m
+include ./topics/faq/faq-qn-delivery.m
     
 \ Q - "Payment"
-include ./faq/faq-qn-payment.m
+include ./topics/faq/faq-qn-payment.m
 
 \ FAQ Sections
-include ./faq/faq-sections.m
+include ./topics/faq/faq-sections.m
 
 \ Room controller
-include ./faq/faq-room-controller.m
+include ./topics/faq/faq-room-controller.m
 
 Q: $_
 A: If you can't find what you're searching for, feel free to drop us a question here: ${ "Inquiries" button }
@@ -48,16 +48,17 @@ A: If you can't find what you're searching for, feel free to drop us a question 
 end-room
 
 \ Inquiries
-room: services-faq-inquiries
-include ./faq/faq-inquiries.m
+room: services_inquiries
+include ./topics/faq/faq-inquiries.m
 
 \ Room controller
-include ./faq/faq-room-controller.m
+include ./topics/faq/faq-room-controller.m
 end-room
 
 
-\ Room control for Our Services bot
-Q: Our Services
-A: ${ faq-welcome }
-K: $back services-faq
---
+\ \ Room control for Our Services bot
+\ Q: Our Services
+\ A: ${ faq-welcome }
+\ K: $back services-faq
+\ --
+

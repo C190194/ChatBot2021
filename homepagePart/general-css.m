@@ -44,3 +44,22 @@
 ;
 
 
+: button ( "s" -- "s" )
+  q{ 
+     border: 2px solid purple;
+     font-size:10px;
+  }q (button)
+;
+
+: backButton ( "s" -- "s" )
+  q{ 
+     border: 2px solid purple
+  }q (button)
+;
+
+: faqButton ( "s" -- "s" )
+  q{ 
+	color:#FFFFFF;
+	background:#53284e;
+  }q  (button)
+;
