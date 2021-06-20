@@ -14,9 +14,6 @@ mem: this-question
 
 assoc: questions
 
-mem: name
-    "None" name!
-
 mem: userName
     "None" userName!
     
@@ -130,7 +127,7 @@ mem: userHearFromWhere
 ;
 
 room: emailValidation
-Q: $x.@email
+Q: $x.@emailRegex
 A: ${ this-question questions }
 C: mobilenumber-question? % last-question userEmail!
 C: +this-question
