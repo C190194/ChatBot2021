@@ -16,7 +16,23 @@ terra/chat/log
 \ include ./buttons.m
 \ include ./meal.m
 
+\ General filters
+include ./topics/homepagePart/bad-language.m
+include ./topics/homepagePart/email.m
+include ./topics/homepagePart/greetings.m
+
+\ General styling for chatbot
+include ./topics/homepagePart/general-css.m
+
+\ Components
+include ./topics/homepagePart/homepage.m
+include ./topics/faq/faq-main.m
 include ./topics/Menu/menu_bot.m
+
+include ./topics/homepagePart/main-room-controller.m
+
+
+
 
 
 
