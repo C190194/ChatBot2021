@@ -18,5 +18,5 @@ K: $back services-faq
 
 Q: $_
 A: Thanks for your inquiry, please let us get back to you. You can continue browsing the FAQ here. ${ "Back to all services" button }
-L: [Customer inquiry] ${ last-question } 
+L: [Customer inquiry] userName:${ userName } | ${ last-question } 
 --
