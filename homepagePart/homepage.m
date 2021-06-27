@@ -1,36 +1,11 @@
 \
-\ Copyright © 2021 liew0183 all rights reserved.
+\ Copyright © 2021 huangrt all rights reserved.
 \
-\ @author: liew0183
-\ @date: 14 Jun 2021
+\ @author: huangrt
+\ @date: 26 Jun 2021
 \
 \ A brief description of this program.
-\ homepage for kitchen haus chatbot
-
-
-
-mem: this-question
-    1 this-question!
-
-assoc: questions
-
-mem: userName
-    "None" userName!
-    
-mem: userMobileNumber
-    "None" userMobileNumber!
-    
-mem: userEmail
-    "None" userEmail!
-    
-mem: userDateOfBirth
-    "RatherNotSay" userDateOfBirth!
-    
-mem: userEvent
-    "None" userEvent!
-    
-mem: userHearFromWhere
-    "None" userHearFromWhere!
+\
 
 : intro 
     "Start the chatbot" generalButton ctx{ startChatbot }
@@ -41,171 +16,20 @@ mem: userHearFromWhere
         #{startChatbot}
 
     }q
-
 ;
 
-: eventQuestion 
-    "Wedding" generalButton ctx{ wedding }
-    "Father's Day" generalButton ctx{ fathersday }
-
+: select_recom_or_explore
+    "Recommend some meals for me" button ctx{ recom }
+    "Let me explore Le Rainbow services" button ctx{ explore }
     q{
-        <p>What event do you want to hold?</p>
-        <p>If others, you can just type it out.</p>
-        #{wedding}
-        #{fathersday}
-
+        <p style="margin-bottom: 10px">Hi! What would you like to do?</p>
+        #{recom} <br>
+        #{explore}
     }q
-
-;
-
-: hearFromWhereQuestion 
-    "Web Search" generalButton ctx{ websearch }
-    "Friends" generalButton ctx{ friends }
-    "Social Media" generalButton ctx{ socialmedia }
-
-    q{
-        <p>How did you hear about Le Rainbow?</p>
-        <p>If others, you can just type it out.</p>
-        #{websearch}
-        #{friends}
-        #{socialmedia}
-
-    }q
-
-;
-
-: dobQuestion 
-    "Skip this question ⏭️" button ctx{ skip }
-
-    q{
-        <p>What is your date of birth (birthday month)?</p>
-        #{skip}
-
-    }q
-
-;
-
-{{
-    1 "What is your name"
-    2 "What is your email?"
-    3 "What is your mobile number?"
-    4 dobQuestion
-    5 eventQuestion
-    6 hearFromWhereQuestion
-    
-}} +questions
-
-
-
-: last? ( -- f)
-    this-question 6 >
 ;
 
 
-: email-question? ( -- f)
-    this-question 2 =
-;
 
-: mobilenumber-question? ( -- f)
-    this-question 3 =
-;
-
-: dob-question? ( -- f)
-    this-question 4 =
-;
-
-: event-question? ( -- f)
-    this-question 5 =
-;
-
-: hearFromWhere-question? ( -- f)
-    this-question 6 =
-;
-
-: savetolog? ( -- f)
-    this-question 8 =
-;
-
-room: emailValidation
-Q: $x.@emailRegex
-A: ${ this-question questions }
-C: mobilenumber-question? % last-question userEmail!
-C: +this-question
-K: -emailValidation
+Q: start the chatbot
+A: ${select_recom_or_explore}
 --
-
-Q: $_
-A: Email format invalid. Please enter email with correct format.
---
-end-room
-
-
-room: personalInfo
-Q: Skip this question ⏭️
-A: last? not % ${ this-question questions }
-A: last? % Thank you for your response! <br> You can select any option below: <br> ${ "View Menu" generalButton } <br> ${ "Our Services" generalButton} <br> ${ "About Us" generalButton}
-C: email-question? % last-question userName!
-C: mobilenumber-question? % last-question userEmail!
-C: dob-question? % last-question userMobileNumber!
-C: hearFromWhere-question? % last-question userEvent!
-C: last? % last-question userHearFromWhere!
-C: +this-question
-K: email-question? % emailValidation
-K: last? % -personalInfo
---
-
-: home_menu
-  "View Menu" generalButton ctx{ btn1 }
-  "Our Services" generalButton ctx{ btn2 }
-  "About Us" generalButton ctx{ btn3 }
-q{
-    <h3>Le Rainbow Chatbot</h3>
-    <p>
-        You can select any option below: 
-        <br> #{btn1}
-        <br> #{btn2}
-        <br> #{btn3}
-    </p>
-
-}q
- ;
-
-
-Q: $_
-A: last? not % ${ this-question questions }
-\ A: last? % Thank you for your response! <br> You can select any option below: <br> ${ "View Menu" generalButton } <br> ${ "Our Services" generalButton} <br> ${ "About Us" generalButton}
-A: last? % Thank you for your response! ${ home_menu }
-L: savetolog? % userName:${ userName },userEmail:${ userEmail },userMobileNumber:${ userMobileNumber },userDateOfBirth:${ userDateOfBirth },userEvent:${ userEvent },userHearFromWhere:${ userHearFromWhere } 
-C: email-question? % last-question userName!
-C: mobilenumber-question? % last-question userEmail!
-C: dob-question? % last-question userMobileNumber!
-C: event-question? % last-question userDateOfBirth!
-C: hearFromWhere-question? % last-question userEvent!
-C: last? % last-question userHearFromWhere!
-C: +this-question
-K: email-question? % emailValidation
-K: last? % -personalInfo
---
-end-room
-
-
-room: chatbotHomepage
-
-Q: Yes|yes
-A: Great! <br> ${ this-question questions }
-C: +this-question
-K: -chatbotHomepage personalInfo
---
-
-Q: No|no
-A: ${ home_menu }
-K: -chatbotHomepage
---
-end-room
-
-
-
-\ Q: Start the chatbot
-\ A: Before we start the conversation, I would like to ask your permission to collect your personal info. <br>${ "Yes" yesButton } ${ "No" noButton }
-\ K: chatbotHomepage
-\ --
