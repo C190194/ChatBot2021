@@ -7,13 +7,21 @@
 \ A brief description of this program.
 \
 
+: ask-permission
+  "Okay" yesButton ctx{ yes }
+  "Maybe next time" noButton ctx{ no }
+  q{
+    <p>To better cater for your needs, I 
+    would like to ask your permission to 
+    collect some info from you.</p><br>
+    #{yes} #{no}
+  }q
+;
+
+
 Q: Start the chatbot
-A: Before we start the conversation, I would like to ask your permission to collect your personal info. <br>${ "Yes" yesButton } ${ "No" noButton }
+A: ${ask-permission}
 K: chatbotHomepage
 --
 
-\ Room control for Our Services bot
-Q: Our Services
-A: ${ faq-welcome }
-K: services_faq
---
+
