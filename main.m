@@ -47,6 +47,18 @@ idk: Sorry, could you rephrase your question?
   log: HRT_ChatBot
 ;
 
+: intro 
+    "Start Chatbot" generalButton ctx{ startChatbot }
+
+    q{
+        <img data-action="zoom" src="https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png" style="width: 100%;">
+        <p color="red">Welcome to <br>🌈<b >LE RAINBOW CATERING!</b>🌈</p>
+        #{startChatbot}
+
+    }q
+
+;
+
 : first_message
   "Recommend some meals for me" button ctx{ menu }
   q{
