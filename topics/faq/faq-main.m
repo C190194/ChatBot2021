@@ -7,12 +7,12 @@
 \ A brief description of this program.
 \
 
-terra/chat
-terra/chat/app
-terra/chat/log
+\ terra/chat
+\ terra/chat/app
+\ terra/chat/log
 
 
-room: services-faq
+room: services_faq
 
 @: faq-whatis
 faq-whatis: what_is_a tell_me_about explain
@@ -56,9 +56,15 @@ include ./topics/faq/faq-room-controller.m
 end-room
 
 
+\ \ Room control for Our Services bot
+\ Q: Our Services
+\ A: ${ faq-welcome }
+\ K: $back services-faq
+\ --
+
 \ Room control for Our Services bot
 Q: Our Services
 A: ${ faq-welcome }
-K: $back services-faq
+K: services_faq
 --
 

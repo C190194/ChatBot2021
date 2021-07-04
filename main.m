@@ -14,9 +14,17 @@ terra/chat/log
 \ include ./topics/query.m
 \ include ./mcq.m
 \ include ./buttons.m
-\ include ./meal.m
+\ include ./topics/Service/Catering/catering.m
 
-include ./topics/Menu/menu_bot.m
+
+
+include ./general_setting/setting_API.m
+include ./save.m
+include ./recommendation/questions.m
+\ include ./homepagePart/homepage-old.m
+\ include ./topics/Menu/menu_bot.m
+\ include ./topics/faq/faq-main.m
+\ include ./topics/About_Us/about-us.m
 
 
 
@@ -26,7 +34,7 @@ idk: Sorry, could you rephrase your question?
   \ NOTE: Add your questions to test here.
   \ Letter case does not matter
   
-  "meal" answer . cr
+  "Recommend some meals for me" answer . cr
   \ "what does DF mean" answer . cr
   \ "bento" answer . cr
   \ "Exquisite Bento" answer . cr 
@@ -39,20 +47,44 @@ idk: Sorry, could you rephrase your question?
   log: HRT_ChatBot
 ;
 
+: intro 
+    "Start Chatbot" generalButton ctx{ startChatbot }
+
+    q{
+        <img data-action="zoom" src="https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png" style="width: 100%;">
+        <p color="red">Welcome to <br>🌈<b >LE RAINBOW CATERING!</b>🌈</p>
+        #{startChatbot}
+
+    }q
+
+;
+
+: first_message
+  "Recommend some meals for me" button ctx{ menu }
+  q{
+    <p>
+      Hello, this is Huang Runtao's ChatBot. Feel free to ask me a question.
+    </p>
+    <center>#{menu}</center>
+    
+  }q
+;
+
 : publish 
   
   \ IMPORTANT - edit this part. It's the name of your bot.
   publish: HRT_ChatBot
   
   \ What your bot says at first. 
-  init: Hello, this is Huang Runtao's ChatBot. Feel free to ask me a question.
+  \ init: ${ intro }
+  init: ${ first_message }
   
   \ ------ PROPERTIES OF THE CHATBOT USER INTERFACE --------
    
   \ The background image. Should be tileable/repeatable. 
   \ Or you can use a HTML color (see https://www.w3schools.com/colors/colors_picker.asp)
   \ background: https://live.staticflickr.com/4135/4915115384_ca7b1df603_b.jpg
-  background: white
+  background: https://products.ls.graphics/mesh-gradients/images/01.-Royal-Heath.jpg
   \ Image of the avatar to use. 
   avatar: https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png
   \ Optional border on avatar
@@ -74,7 +106,7 @@ idk: Sorry, could you rephrase your question?
   \ bubble-border: solid blue 1px
   bubble-border: solid #d9c1ff 2px
   bubble-radius: 16
-  bubble-font-size: 14
+  bubble-font-size: 15
   \ Max Width of bot bubble, in pixels
   bot-bubble-width: 270
   \ You can limit the number of responses displayed
@@ -96,6 +128,10 @@ idk: Sorry, could you rephrase your question?
   thumbnail: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100
   
 ;
+
+
+
+
 
 
 
