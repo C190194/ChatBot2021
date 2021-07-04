@@ -207,7 +207,7 @@ K: last? % -collect-personal-info
 --
 end-room
 
-
+\ include A: and K: below to start asking user's permission to collect their personal info
 Q: Collect personal info
 A: ${ask-permission}
 K: waiting-for-permission
