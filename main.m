@@ -109,9 +109,9 @@ idk: Sorry, could you rephrase your question?
   avatar-border: none
   
   \ Google font to import.
-  import-font: Open+Sans:wght@300
+  import-font: Amiko:wght@250
   \ Font to use in bubbles
-  bubble-font: 'Open Sans', sans-serif
+  bubble-font: 'Amiko', sans-serif
   \ Font Color & Background of bot bubble
   bubble-bot-color: #333
   bubble-bot-background: #f1f1f1 \ #FFF is pure white
