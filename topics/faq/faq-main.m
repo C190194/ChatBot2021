@@ -7,64 +7,44 @@
 \ A brief description of this program.
 \
 
-\ terra/chat
-\ terra/chat/app
-\ terra/chat/log
+\ jokes
+include ./topics/faq/secret.m
 
+\ FAQ specific stylings
+include ./topics/faq/faq_css.m
+
+\ Room controller
+include ./topics/faq/faq_room_controller.m
 
 room: services_faq
 
-@: faq-whatis
-faq-whatis: what_is_a tell_me_about explain
-
-\ Questions by category
-\ Q - "Events"
-include ./topics/faq/faq-qn-events.m
-
-\ Q - "Meals"
-include ./topics/faq/faq-qn-meals.m
-
-\ Q - "Value-Add Services"
-include ./topics/faq/faq-qn-valueadd.m
-    
-\ Q - "Orders"
-include ./topics/faq/faq-qn-orders.m
-    
-\ Q - "Delivery"
-include ./topics/faq/faq-qn-delivery.m
-    
-\ Q - "Payment"
-include ./topics/faq/faq-qn-payment.m
+\ Questions List
+include ./topics/faq/faq_question_db.m
 
 \ FAQ Sections
-include ./topics/faq/faq-sections.m
+include ./topics/faq/faq_section_db.m
 
-\ Room controller
-include ./topics/faq/faq-room-controller.m
-
+\ idkResponses List
+include ./topics/faq/faq_idk_responses_db.m
 Q: $_
-A: If you can't find what you're searching for, feel free to drop us a question here: ${ "Inquiries" button }
+A: ${ faqIdk1 } ; ${ faqIdk2 } ; ${ faqIdk3 } ; ${ faqIdk4 }
 --
+
 end-room
+
 
 \ Inquiries
 room: services_inquiries
 include ./topics/faq/faq-inquiries.m
-
-\ Room controller
-include ./topics/faq/faq-room-controller.m
 end-room
-
-
-\ \ Room control for Our Services bot
-\ Q: Our Services
-\ A: ${ faq-welcome }
-\ K: $back services-faq
-\ --
 
 \ Room control for Our Services bot
 Q: Our Services
 A: ${ faq-welcome }
 K: services_faq
 --
+
+
+
+
 

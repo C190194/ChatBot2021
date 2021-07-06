@@ -9,7 +9,7 @@
 
 @: greeting thank bye
 greeting: Hello Hi Hey 
-thank: thank|thanks
+thank: thank|thanks|thank_you
 bye: bye|goodbye|good_bye|so_long
 
 
@@ -39,11 +39,11 @@ A: I am ${ botname } ; My name is ${ botname }
 --
 
 Q: :first @thank
-A: You're welcome
+A: You're welcome ; Don't mention it ; No problem
 --
 
 Q: @bye
-A: Bye ; Hear from you again ; Good bye! 
+A: Bye ; Hear from you again ; Good bye! ; See you soon!
 --
 
 
