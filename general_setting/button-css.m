@@ -10,7 +10,7 @@
 : button ( "s" -- "s" )
   q{ 
      border: 2px solid purple;
-     font-size:10px;
+     font-size:15px;
   }q (button)
 ;
 
@@ -18,7 +18,7 @@
   q{ 
      color:white;
      background-color:#4CAF50;
-     font-size:10px;
+     font-size:15px;
      border: 2px solid #4efa89;
   }q (button)
 ;
@@ -28,6 +28,35 @@
      border: 2px solid orange;
      background-color:#ffd16a;
      color:red;
-     font-size:10px;
+     font-size:15px;
   }q (button)
+;
+
+: generalButton ( "s" -- "s" )
+  q{ 
+	margin-left:10px;
+	margin-top:10px;
+	padding:10px;
+	text-align: center;
+	width: 160px;
+	font-size:15px;
+	color:#FFFFFF;
+	background:#53284e;
+  }q  (button)
+;
+
+: faqButton ( "s" -- "s" )
+  q{ 
+	color:#FFFFFF;
+	background:#53284e;
+	font-size:15px;
+  }q  (button)
+;
+
+: backButton ( "s" -- "s" )
+  q{ 
+	color:#FFF;
+	background:#42ddf5;
+	font-size:15px;
+  }q  (button)
 ;

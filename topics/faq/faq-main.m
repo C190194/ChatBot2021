@@ -7,9 +7,9 @@
 \ A brief description of this program.
 \
 
-terra/chat
-terra/chat/app
-terra/chat/log
+\ terra/chat
+\ terra/chat/app
+\ terra/chat/log
 
 
 room: services_faq
@@ -61,4 +61,10 @@ end-room
 \ A: ${ faq-welcome }
 \ K: $back services-faq
 \ --
+
+\ Room control for Our Services bot
+Q: Our Services
+A: ${ faq-welcome }
+K: services_faq
+--
 
