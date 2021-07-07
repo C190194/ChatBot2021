@@ -35,7 +35,7 @@ end-room
 
 \ Inquiries
 room: services_inquiries
-include ./topics/faq/faq-inquiries.m
+include ./topics/faq/faq_inquiries.m
 end-room
 
 \ Room control for Our Services bot
