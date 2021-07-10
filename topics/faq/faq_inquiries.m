@@ -19,7 +19,7 @@ K: $back services-faq
 : faq-inquiry-thanks
 "Back to all services" backButton ctx{ backBtn }
 q{
-    <h3>Thanks! We will get back to you.</h3>
+    <h3>Thanks! We will get back to you 👍🏼</h3>
     </br>
     #{backBtn}
 }q
