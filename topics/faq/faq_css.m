@@ -7,33 +7,18 @@
 \ A brief description of this program.
 \
 
-: button ( "s" -- "s" )
-  q{ 
-     border: 2px solid purple;
-     font-size:15px;
-  }q (button)
-;
 
-: generalButton ( "s" -- "s" )
-  q{ 
-	margin-left:10px;
-	margin-top:10px;
-	padding:10px;
-	text-align: center;
-	width: 160px;
-	font-size:15px;
-	color:#FFFFFF;
-	background:#53284e;
-  }q  (button)
-;
-
-: backButton ( "s" -- "s" )
-  q{ 
-	color:#FFF;
-	background:#42ddf5;
-	font-size:15px;
-  }q  (button)
-;
+\ TODO
+\ : roundedDivider
+\   q{
+\     <style>
+\       border-top: 8px solid #bbb;
+\       border-radius: 5px;
+\     </style>
+\     
+\     <hr>
+\   }q
+\ ;
 
 : faqMenuButton ( "s" -- "s" )
   q{ 
@@ -62,3 +47,4 @@
 	font-size:14px;
   }q  (button)
 ;
+
