@@ -80,15 +80,17 @@ A: ${ faq-meals }
   "How about adding a live cooking show?" button ctx{ Btn2 }
   "Is there food tasting?" button ctx{ Btn3 }
   "Can we arrange a site visit?" button ctx{ Btn4 }
+  "Is there last minute order amendment available?" button ctx{ Btn5 }
 q{
     <h2>May I suggest some ways to elevate your food reception? ✨</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/LR-Wedding-Page-Banner-03-1.jpg" style="width:260px;">
-    <p>We create beautiful wedding receptions, offer live cooking station (chef station), and more!</p>
+    <p>We create beautiful wedding receptions, offer live cooking station (chef station), provide real time updates and more!</p>
     <p>
     #{Btn1} </br>
     #{Btn2} </br>
     #{Btn3} </br>
-    #{Btn4}
+    #{Btn4} </br>
+    #{Btn5}
     </p>
     
     </br>

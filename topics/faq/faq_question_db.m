@@ -154,3 +154,7 @@ Q: Can we arrange a site visit
 Q: $faq-whatis Site visit
 A: Site visit is another initiative that we extend to you (our clients) to understand our process. We hope to build a long-term partnership based on trust and quality, and nothing less.
 --
+
+Q: Is there last minute order amendment available
+A: Yes, we are flexible in adapting to last minute changes as far as possible. Depending on resource availability, we would be glad to accommodate your needs.
+--
