@@ -33,32 +33,82 @@ A: We have catered to events anywhere from 10 pax (mini buffet) to 3500 pax. Ple
 --
 
 Q: Are there special services which can improve my event
-A: Yes, we offer customised menu on a per-event basis, set up instant chats to coordinate between clients and project stakeholders in real-time, cocktail canape decor, live cooking stations and more! Click to explore: <buttons to link to value-add services>
+A: Yes, we offer customised menu on a per-event basis, set up instant chats to coordinate between clients and project stakeholders in real-time, cocktail canape decor, live cooking stations and more! Click to explore: ${ "Our Value-Added Services" button }
 --
 
-Q: How much space is required for the buffet tables
+Q: Amount of space required for the buffet setup
 A: The number of tables used for the set-up will depend on the number of pax ordered. Normally, there would be 4-5 tables, taking up 15 feet by 3 feet. Do advise on the space availability when you place your order and our sales associates will accommodate as much as we can.
 --
 
+
+
+
+\ -------------------------------------------------------------------------------------------------
+\   "Orders and Delivery"
+Q: How do I know if my order is confirmed
+A: Your order is confirmed after payment. A confirmation email will be sent to you.
+--
+
+Q: How do I change my order
+A: Please contact our customer sales associate to change your order at least 3 days before the day of the event.
+--
+
+Q: Can I add additional pax after placing my order
+A: Yes, please contact our customer sales associate to add additional pax at least 3 days before the day of the event.
+--
+
+Q: What are the delivery charges
+A: Delivery charges are ${ "$50" }for regular buffets, and ${ "$30" }for takeaway sets. Separate delivery fees may also be applied for live stations and weddings.
+--
+
+Q: What time will the collection be
+A: Collection time will be 4 hours after arrival. Additional hours are chargeable per hour.
+--
+
+Q: Will disposable cutlery be provided
+A: Yes, we will provide a buffer of 20% for the number of catered pax in a buffet. These will include fork, spoon, plates, cups, etc
+--
+
+Q: Is the eating time the same as the set up time
+A: No, they are different. Our staff will come 45 mins to 1 hour before the event to do the buffet set up to ensure that your guests can have their meal on time.
+--
+
+
+\ -------------------------------------------------------------------------------------------------
+\   "Payment"
+Q: Are there other payment options
+A: We will be glad to arrange alternate payment options. Please let us know this when you are ordering!
+--
+
+Q: Can I get an official invoice for my company
+A: We will be glad to assist you with that. Our customer service associates will get back to you. ${ "Send a message" generalButton }
+--
+
+\ -------------------------------------------------------------------------------------------------
+\   Pricing
+Q: $faq-howmuch is|of $faq-valueAddServices
+A: Please discuss this with our customer sales and we can help you better. ${ "Send a message" generalButton }
+--
+
+Q: $faq-howmuch is|of $faq-food
+A: Visit our menu browser [here weblink or display the menu/recommendation chooser]
+--
 
 \ -------------------------------------------------------------------------------------------------
 \   "Menu Questions"
 \ Q: What is a Bento meal
 Q: $faq-whatis Bento meal
-Q: Bento meal
 A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-35-450x388.jpeg" image } Bento meal is an wholesome packaged meal suitable for mass distribution. The packaging ranges from standard to premium boxes, so do indicate your preference when making your order. We can also provide daily meals with customised menus for your organisation.
 --
 
 \ Q: What is a Mini Buffet
 Q: $faq-whatis Mini Buffet
-Q: Mini Buffet
 A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-31-450x388.jpeg" image } Mini buffet is a mini-sized package without any tables to set-up. Food is packed, providing easy dining for up to 20 people. Food available is similar to our other buffet packages, but do get your own drinks.
 --
 
 \ Q: What is a Buffet Package
 Q: $faq-whatis Buffet
-Q: Buffet
-A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-2020-10-23T140551.322.jpeg" image } Buffet package gives the full buffet experience! We can suit any theme. There are also many available add-ons to make your buffet event stand out from the rest, such as service staff, live station (chef station), and Cocktail Canape. Interested? Find out more below. ${ "Value-Add Services" button }
+A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-2020-10-23T140551.322.jpeg" image } Buffet package gives the full buffet experience! We can suit any theme. There are also many available add-ons to make your buffet event stand out from the rest, such as service staff, live station (chef station), and Cocktail Canape. Interested? Find out more below. ${ "Our Value-Added Services" button }
 --
 
 
@@ -103,56 +153,4 @@ A: Food tasting session is available on request, subject to our T&Cs. We promise
 Q: Can we arrange a site visit
 Q: $faq-whatis Site visit
 A: Site visit is another initiative that we extend to you (our clients) to understand our process. We hope to build a long-term partnership based on trust and quality, and nothing less.
---
-
-
-\ -------------------------------------------------------------------------------------------------
-\   "Orders and Delivery"
-Q: How do I know if my order is confirmed
-A: Your order is confirmed after payment. A confirmation email will be sent to you.
---
-
-Q: How do I change my order
-A: Please contact our customer sales associate to change your order at least 3 days before the day of the event.
---
-
-Q: Can I add additional pax after placing my order
-A: Yes, please contact our customer sales associate to add additional pax at least 3 days before the day of the event.
---
-
-Q: What are the delivery charges
-A: Delivery charges are ${ "$" }50 for regular buffets, and ${ "$" }30 for takeaway sets. Separate delivery fees may also be applied for live stations and weddings.
---
-
-Q: What time will the collection be
-A: Collection time will be 4 hours after arrival. Additional hours are chargeable per hour.
---
-
-Q: Will disposable cutlery be provided
-A: Yes, we will provide a buffer of 20% for the number of catered pax in a buffet. These will include fork, spoon, plates, cups, etc
---
-
-Q: Is the eating time the same as the set up time
-A: No, they are different. Our staff will come 45 mins to 1 hour before the event to do the buffet set up to ensure that your guests can have their meal on time.
---
-
-
-\ -------------------------------------------------------------------------------------------------
-\   "Payment"
-Q: Are there other payment options
-A: We will be glad to arrange alternate payment options. Please let us know this when you are ordering!
---
-
-Q: Can I get an official invoice for my company
-A: We will be glad to assist you with that. Our customer service associates will get back to you. ${ "Send a message" generalButton }
---
-
-\ -------------------------------------------------------------------------------------------------
-\   Pricing
-Q: $faq-howmuch is|of $faq-valueAddServices
-A: Please discuss this with our customer sales and we can help you better. ${ "Send a message" generalButton }
---
-
-Q: $faq-howmuch is|of $faq-food
-A: Visit our menu browser [here weblink or display the menu/recommendation chooser]
 --

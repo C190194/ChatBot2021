@@ -8,14 +8,13 @@
 \
 
 
-
 \ == Events
 : faq-events
   "Back" backButton ctx{ servicesBtn }
   "Do you cater multiple meals for all-day events?" button ctx{ Btn1 }
   "How many people can you cater to?" button ctx{ Btn2 }
   "Are there special services which can improve my event?" button ctx{ Btn3 }
-  "How much space is required for the buffet tables?" button ctx{ Btn4 }
+  "Amount of space required for the buffet setup?" button ctx{ Btn4 }
 q{
     <h2>We can support many events! 🎟️</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/DSC_3370-1-scaled.jpg" style="width:260px;">
@@ -69,7 +68,7 @@ q{
 }q
 ;
 
-Q: Menu options and customisation
+Q: Food options and customisation
 Q: Meals
 A: ${ faq-meals }
 --
