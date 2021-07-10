@@ -24,7 +24,7 @@ q{
     </p>
 
     </br>
-    <h3>Can't find what you're looking for? </h3>
+    <h3>❓ Can't find what you're looking for? </h3>
     #{inquiryBtn}
 
 
@@ -40,7 +40,7 @@ q{
   "Back to Our Services" backButton ctx{ backBtn }
   "Contact Us" faqMenuButton ctx{ contactInfoBtn }
 q{
-    <h2>How can we help?</h2>
+    <h2>How can we help? 😃</h2>
     <p>
         Simply type your enquiry below. Our team will get in touch with you.
     </p>
@@ -107,9 +107,3 @@ Q: Contact Us
 A: ${ faq-contact }
 K: -services_inquiries
 --
-
-
-
-
-
-

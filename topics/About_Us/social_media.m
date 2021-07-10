@@ -13,7 +13,7 @@
     "We're also on Facebook" generalButton ctx{ facebookBtn }
     "Back to About" backButton ctx{ backBtn }
 q{ 
-    <div style="padding:10px;border-radius:16px;display:inline-block;text-align:left;vertical-align:middle;border:none;color:#333;font-family:Amiko, sans-serif;font-size:14px;background:#EEE;word-wrap:break-word;min-width:40px;max-width:400px;position:relative;left:-16px;top:-16px;z-index:0;">
+    <div style="padding:10px;border-radius:16px;display:inline-block;text-align:left;vertical-align:middle;border:none;color:#333;font-family:Amiko, sans-serif;font-size:15px;background:#EEE;word-wrap:break-word;min-width:40px;max-width:400px;position:relative;left:-16px;top:-16px;z-index:0;">
         <h2> We love reaching out! 👋🏼</h2>
         <p>
             As part of sharing what we do, we love showcasing examples of successful buffet events to give you a better idea of the quality you can expect from us.

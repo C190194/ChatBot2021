@@ -19,7 +19,7 @@ K: $clear services-faq
 : faq-inquiry-thanks_1
 "Back to Our Services" backButton ctx{ backBtn }
 q{
-    <h3>Thanks! We will get back to you.</h3>
+    <h3>Thanks! We will get back to you 👍🏼</h3>
     </br>
     #{backBtn}
 }q
@@ -29,7 +29,7 @@ q{
 "Yes" yesButton ctx{ yes }
 "No" noButton ctx{ no }
 q{
-    <h3>Thanks! We have received your message.</h3>
+    <h3>Thanks! We have received your message 👍🏼</h3>
     </br>
     <p>Would you like to leave your contact info to get our reply?</p>
     #{yes} #{no}
