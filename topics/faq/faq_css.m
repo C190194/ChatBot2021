@@ -7,19 +7,6 @@
 \ A brief description of this program.
 \
 
-
-\ TODO
-\ : roundedDivider
-\   q{
-\     <style>
-\       border-top: 8px solid #bbb;
-\       border-radius: 5px;
-\     </style>
-\     
-\     <hr>
-\   }q
-\ ;
-
 : faqMenuButton ( "s" -- "s" )
   q{ 
     position: relative;

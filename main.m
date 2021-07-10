@@ -137,9 +137,9 @@ idk: Sorry, could you rephrase your question?
 
   \ ----- PROPERTIES OF THE URL LINK FOR SOCIAL MEDIA --------
   \ These will be visible when you share the link to your bot.
-  title: HRT ChatBot
-  description: My first chatbot.
-  thumbnail: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100
+  title: Le Rainbow Assistant
+  description: Discover our menu and our services.
+  thumbnail: https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png
   
 ;
 

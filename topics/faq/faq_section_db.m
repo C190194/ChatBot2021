@@ -17,7 +17,7 @@
   "Are there special services which can improve my event?" button ctx{ Btn3 }
   "How much space is required for the buffet tables?" button ctx{ Btn4 }
 q{
-    <h2>We can support many events!</h2>
+    <h2>We can support many events! 🎟️</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/DSC_3370-1-scaled.jpg" style="width:260px;">
     <p>We offer buffet or mini-buffet sets for all events such as parties, seminars, celebrations, and more!</p>
     
@@ -50,7 +50,7 @@ A: ${ faq-events }
   "Can I split the main course into half rice and half noodles?" button ctx{ Btn6 }
   "How long will the food last?" button ctx{ Btn7 }
 q{
-    <h2>Questions about our food?</h2>
+    <h2>Questions about our food? 🍛</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2021/04/a1.jpg" style="width:260px;">
     <p>From Bento meals, Mini Buffet to full Buffet Packages, we have them all!</p>
 
@@ -82,7 +82,7 @@ A: ${ faq-meals }
   "Is there food tasting?" button ctx{ Btn3 }
   "Can we arrange a site visit?" button ctx{ Btn4 }
 q{
-    <h2>May I suggest some ways to elevate your food reception?</h2>
+    <h2>May I suggest some ways to elevate your food reception? ✨</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2020/10/LR-Wedding-Page-Banner-03-1.jpg" style="width:260px;">
     <p>We create beautiful wedding receptions, offer live cooking station (chef station), and more!</p>
     <p>
@@ -113,7 +113,7 @@ A: ${ faq-valueadd }
   "What time will the collection be?" button ctx{ Btn5 }
   "Will disposable cutlery be provided?" button ctx{ Btn6 }
 q{
-    <h2>About Our Ordering Process</h2>
+    <h2>About Our Ordering Process 📝</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2021/04/lrgal-scaled.jpg" style="width:260px;">
     <p>We generally need you to order at least 3 days prior to the event, but we have also offered express catering services with 1 day notice.</p>
     </br>
@@ -125,7 +125,7 @@ q{
     
     <br>
     <p>
-    <h3>Delivery</h3>
+    <h3>Delivery 🚚</h3>
     #{Btn4} </br>
     #{Btn5} </br>
     #{Btn6}
@@ -177,7 +177,7 @@ A: ${ faq-orders-delivery }
   "Are there other payment options?" button ctx{ Btn1 }
   "Can I get an official invoice for my company?" button ctx{ Btn2 }
 q{
-    <h2>Payment is easy!</h2>
+    <h2>Payment is easy! 💲</h2>
     <img src="https://lerainbow.com.sg/wp-content/uploads/2021/04/lr4-scaled.jpg" style="width:260px;">
     <p>We accept bank transfers via PayNow. Our customer service associates will advise you on payment when your order has been confirmed.</p>
     </br>
