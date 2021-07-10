@@ -9,7 +9,7 @@
 
 \ Main msg for about us
 : about
-    "Why Le Rainbow?" button ctx{ whyBtn }
+    "Why Le Rainbow?" lerainbowButton ctx{ whyBtn }
     "See our contact info and operating hours" button ctx{ infoBtn }
     "Hear from satisfied customers" button ctx{ testimonialBtn }
     "Find us on social media" button ctx{ socialBtn }
