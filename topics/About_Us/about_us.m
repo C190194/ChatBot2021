@@ -51,7 +51,11 @@ A: ${ contact-info-operating }
 --
 
 Q: Find us on social media
-A: ${ social-media-intro }
+A: ${ social-media-instagram }
+--
+
+Q: Were also on Facebook
+A: ${ social-media-facebook }
 --
 
 \ Testimonials looper
@@ -69,11 +73,11 @@ A: ${ food-certification }
 
 Q: See our track record    
 Q: Track Record
-A: ${track-record}
+A: ${ track-record }
 --
 
 Q: Our Trusted Clients
-A: ${our-trusted-clients}
+A: ${ our-trusted-clients }
 --
 
 end-room
@@ -93,4 +97,5 @@ end-room
 \ Q: Food Certification
 \ A: Our brand is certified by Association of Catering Professionals Singapore and Majlis Ugama Islam Singapura.
 \ --
+
 
