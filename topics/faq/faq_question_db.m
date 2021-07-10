@@ -121,7 +121,7 @@ A: Yes, please contact our customer sales associate to add additional pax at lea
 --
 
 Q: What are the delivery charges
-A: Delivery charges are $ 50 for regular buffets, and $ 30 for takeaway sets. Separate delivery fees may also be applied for live stations and weddings.
+A: Delivery charges are ${ "$" }50 for regular buffets, and ${ "$" }30 for takeaway sets. Separate delivery fees may also be applied for live stations and weddings.
 --
 
 Q: What time will the collection be
