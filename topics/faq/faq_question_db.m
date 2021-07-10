@@ -40,7 +40,9 @@ Q: Amount of space required for the buffet setup
 A: The number of tables used for the set-up will depend on the number of pax ordered. Normally, there would be 4-5 tables, taking up 15 feet by 3 feet. Do advise on the space availability when you place your order and our sales associates will accommodate as much as we can.
 --
 
-
+Q: What types of events do you cater
+A: We do anything from buffet reception to bento lunches. We have supported events such as seminars, training programs, company cohesion activities, company anniversary, festival celebration and even daily staff meals.
+--
 
 
 \ -------------------------------------------------------------------------------------------------

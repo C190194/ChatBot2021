@@ -11,6 +11,7 @@
 \ == Events
 : faq-events
   "Back" backButton ctx{ servicesBtn }
+  "What types of events do you cater?" button ctx{ Btn }
   "Do you cater multiple meals for all-day events?" button ctx{ Btn1 }
   "How many people can you cater to?" button ctx{ Btn2 }
   "Are there special services which can improve my event?" button ctx{ Btn3 }
@@ -21,6 +22,7 @@ q{
     <p>We offer buffet or mini-buffet sets for all events such as parties, seminars, celebrations, and more!</p>
     
     <p>
+    #{Btn} </br>
     #{Btn1} </br>
     #{Btn2} </br>
     #{Btn3} </br>
