@@ -14,24 +14,6 @@
   }q (button)
 ;
 
-: yesButton ( "s" -- "s" )
-  q{ 
-     color:white;
-     background-color:#4CAF50;
-     font-size:15px;
-     border: 2px solid #4efa89;
-  }q (button)
-;
-
-: noButton ( "s" -- "s" )
-  q{ 
-     border: 2px solid orange;
-     background-color:#ffd16a;
-     color:red;
-     font-size:15px;
-  }q (button)
-;
-
 : generalButton ( "s" -- "s" )
   q{ 
 	margin-left:10px;
@@ -52,18 +34,6 @@
 	font-size:15px;
   }q  (button)
 ;
-
-\ TODO
-\ : roundedDivider
-\   q{
-\     <style>
-\       border-top: 8px solid #bbb;
-\       border-radius: 5px;
-\     </style>
-\     
-\     <hr>
-\   }q
-\ ;
 
 : faqMenuButton ( "s" -- "s" )
   q{ 

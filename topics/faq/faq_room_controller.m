@@ -83,8 +83,9 @@ q{
 
 q{
     <p>
-        You can contact us via email () or telephone (). We will be glad to help any way we can!
-        When you are done, click the button to explore our other services, or to go back to the main page. </br>
+        You can contact us via email,<a href = "mailto: sales@lerainbow.com.sg">sales@lerainbow.com.sg</a>or telephone,<a href="tel:6589 8855">6589 8855</a>). We will be glad to help any way we can!
+        When you are done, click the button to explore our other services, or to go back to the main page. 
+        </br>
         #{backBtn}
     </p>
 }q
