@@ -60,3 +60,13 @@
 	font-size:15px;
   }q  (button)
 ;
+
+: lerainbowButton ( "s" -- "s" )
+  q{ 
+    	border: 2px solid purple;
+	font-size:15px;
+    	color:#FFF;
+	background: url(https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80);
+	background-size: 150px 50px;
+  }q  (button)
+;
