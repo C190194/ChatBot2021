@@ -17,14 +17,13 @@ terra/chat/log
 \ include ./topics/Service/Catering/catering.m
 
 
-
 include ./general_setting/setting_API.m
 include ./save.m
 include ./recommendation/questions.m
 \ include ./homepagePart/homepage-old.m
 \ include ./topics/Menu/menu_bot.m
 \ include ./topics/faq/faq-main.m
-\ include ./topics/About_Us/about-us.m
+\ include ./topics/About_Us/about_us.m
 
 
 
@@ -92,9 +91,9 @@ idk: Sorry, could you rephrase your question?
   avatar-border: none
   
   \ Google font to import.
-  import-font: Open+Sans:wght@300
+  import-font: Amiko:wght@250
   \ Font to use in bubbles
-  bubble-font: 'Open Sans', sans-serif
+  bubble-font: 'Amiko', sans-serif
   \ Font Color & Background of bot bubble
   bubble-bot-color: #333
   bubble-bot-background: #f1f1f1 \ #FFF is pure white
