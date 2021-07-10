@@ -8,68 +8,89 @@
 \
 
 @: about
-about: about about_you
+about: about about_you about_us
 
-: newLine
-  q{
-    <br/>
-  }q
-;
+include ./topics/About_Us/about_us_db.m
+include ./topics/About_Us/contact_n_op_hours.m
+include ./topics/About_Us/social_media.m
+include ./topics/About_Us/testimonials.m
 
-: facebookLink ( "s" -- "s" )
-  q{
-    <a href="https://www.facebook.com/lerainbowcatering/" target="_blank">Facebook</a>
-  }q
-;
+include ./topics/About_Us/food_certification.m
+include ./topics/About_Us/track_record.m
+include ./topics/About_Us/corporate_clients.m
 
-: instaLink ( "s" -- "s" )
-  q{
-    <a href="https://www.instagram.com/lerainbowcatering/?hl=en" target="_blank">Instagram</a>
-  }q
-;
 
-: telephone ( "s" -- "s" )
-  q{
-    <a href="tel:6589 8855">6589 8855</a>
-  }q
-;
-
-: email ( "s" -- "s" )
-  q{
-    <a href = "mailto: sales@lerainbow.com.sg">sales@lerainbow.com.sg</a>
-  }q
-;
-
-: generalButton ( "s" -- "s" )
-  q{ 
-	margin-left:10px;
-	margin-top:10px;
-	padding:10px;
-	text-align: center;
-	width: 160px;
-	font-size:15px;
-	color:#FFFFFF;
-	background:#53284e;
-  }q  (button)
-;
 
 Q: $about
-A: Le Rainbow Catering strives to be the best Halal caterer in Singapore, serving a mix of locally-inspired Western & Fusion cuisine. We have supported many different functions and events with our food. To learn more about us, click on any topic below: ${ newLine } ${ "Contact Information" generalButton } ${ "Operating Hours" generalButton } ${ "Social Media" generalButton } ${ "Food Certification" generalButton }
+A: ${ about }
+K: $clear aboutus-room
 --
 
-Q: Operating Hours
-A: We operate from 8:30AM to 5PM from Monday to Friday, 8:30AM to 12PM on Saturday and closed on Sunday.
+mem: testimonial_cnt
+1 testimonial_cnt!
+
+room: aboutus-room
+\ Navigation
+Q: Back to Main
+A: ${ intro }
+K: $clear
 --
 
-Q: Contact Information
-A: Feel free to contact us through our telephone ${ telephone }. Alternatively, you can email us for any enquiries or bookings at ${ email }.
+Q: Back to About
+A: ${ about }
 --
 
-Q: Social Media
-A: You can find us on${ facebookLink }or${ instaLink }.
+\ Main menu items
+Q: Why Le Rainbow
+Q: Back
+A: ${ why-lerainbow }
 --
 
-Q: Food Certification
-A: Our brand is certified by Association of Catering Professionals Singapore and Majlis Ugama Islam Singapura.
+Q: See our contact info and operating hours
+A: ${ contact-info-operating }
 --
+
+Q: Find us on social media
+A: ${ social-media-intro }
+--
+
+\ Testimonials looper
+Q: Hear from satisfied customers
+Q: Show me another
+A: ${ testimonial_cnt testimonials_list }
+C: testimonial_cnt 6 <= % testimonial_cnt 1+ testimonial_cnt!
+C: testimonial_cnt 6 > % 1 testimonial_cnt!
+--
+
+\ "Why Le Rainbow" Menu iitems
+Q: Our food certification
+A: ${ food-certification }
+--
+
+Q: See our track record    
+Q: Track Record
+A: ${track-record}
+--
+
+Q: Our Trusted Clients
+A: ${our-trusted-clients}
+--
+
+end-room
+
+\ Q: Operating Hours
+\ A: We operate from 8:30AM to 5PM from Monday to Friday, 8:30AM to 12PM on Saturday and closed on Sunday.
+\ --
+\ 
+\ Q: Contact Information
+\ A: Feel free to contact us through our telephone ${ telephone }. Alternatively, you can email us for any enquiries or bookings at ${ email }.
+\ --
+\ 
+\ Q: Social Media
+\ A: You can find us on${ facebookLink }or${ instaLink }.
+\ --
+
+\ Q: Food Certification
+\ A: Our brand is certified by Association of Catering Professionals Singapore and Majlis Ugama Islam Singapura.
+\ --
 
