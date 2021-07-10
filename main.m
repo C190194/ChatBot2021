@@ -8,24 +8,45 @@ terra/chat/app
 terra/chat/log
 
 
-\ include ./topics/bad-language.m
-\ include ./topics/greetings.m
-\ include ./topics/fav.m
-\ include ./topics/query.m
-\ include ./mcq.m
-\ include ./buttons.m
-\ include ./topics/Service/Catering/catering.m
-
 
 include ./general_setting/setting_API.m
-include ./save.m
-include ./recommendation/questions.m
-\ include ./homepagePart/homepage-old.m
-\ include ./topics/Menu/menu_bot.m
-\ include ./topics/faq/faq-main.m
-\ include ./topics/About_Us/about_us.m
+
+\ plugin
+include ./test.m
+
+include ./homepagePart/homepage.m
+
+include ./personal_info/collectPersonalInfo.m
+
+include ./topics/faq/faq-main.m
+
+include ./topics/About_Us/about-us.m
+
+: menu_pic ( "s" -- "s" )
+  q{ 
+    height: 150px;
+  }q  (image)
+;
+
+include ./topics/Menu/fav_set.m
+include ./topics/Menu/menu_pic.m
+include ./topics/Menu/general_questions.m
+include ./topics/Menu/meal_text_import.m
+
+include ./topics/Menu/menu_bot.m
+
+include ./recommendation/event_question.m
+include ./topics/Menu/meal_import.m
+\ include ./topics/Menu/meal_import_2.m
 
 
+
+
+
+Q: $_
+A: This question has been logged for further development. <br> <br> ${ "https://i.pinimg.com/736x/da/23/8d/da238dc3a982fa7dfa89055279f8fe96.jpg" image }
+L: idk last-question 
+--
 
 idk: Sorry, could you rephrase your question?
 
@@ -33,10 +54,12 @@ idk: Sorry, could you rephrase your question?
   \ NOTE: Add your questions to test here.
   \ Letter case does not matter
   
-  "Recommend some meals for me" answer . cr
-  \ "what does DF mean" answer . cr
-  \ "bento" answer . cr
-  \ "Exquisite Bento" answer . cr 
+  "1" answer . cr
+  "2" answer . cr
+  \ "Recommend some meals for me" answer . cr
+  \ "Lunch or Dinner" answer . cr
+  \ "$ 4~10/pax" answer . cr
+   
   \ "Le Bitez $4.00/pax" answer . cr
   
 ;
@@ -44,18 +67,6 @@ idk: Sorry, could you rephrase your question?
 : update-log 
   \ this name needs to match the name in publish:
   log: HRT_ChatBot
-;
-
-: intro 
-    "Start Chatbot" generalButton ctx{ startChatbot }
-
-    q{
-        <img data-action="zoom" src="https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png" style="width: 100%;">
-        <p color="red">Welcome to <br>🌈<b >LE RAINBOW CATERING!</b>🌈</p>
-        #{startChatbot}
-
-    }q
-
 ;
 
 : first_message
@@ -75,8 +86,8 @@ idk: Sorry, could you rephrase your question?
   publish: HRT_ChatBot
   
   \ What your bot says at first. 
-  \ init: ${ intro }
-  init: ${ first_message }
+  init: ${ intro }
+  \ init: ${ first_message }
   
   \ ------ PROPERTIES OF THE CHATBOT USER INTERFACE --------
    
@@ -85,15 +96,19 @@ idk: Sorry, could you rephrase your question?
   \ background: https://live.staticflickr.com/4135/4915115384_ca7b1df603_b.jpg
   background: https://products.ls.graphics/mesh-gradients/images/01.-Royal-Heath.jpg
   \ Image of the avatar to use. 
-  avatar: https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png
+  \ avatar: https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png
+  \ avatar: https://www.allantoh.com/wp-content/uploads/2020/04/logo3.jpg
+  \ avatar: https://cdn.pixabay.com/photo/2017/05/02/17/16/rainbow-2278774__480.png
+  \ avatar: https://cdn.pixabay.com/photo/2014/04/02/17/00/rainbow-307622__480.png
+  avatar: https://cdn.pixabay.com/photo/2016/02/10/20/22/rainbow-1192500__480.png
   \ Optional border on avatar
   \ avatar-border: solid #AAA 1px
   avatar-border: none
   
   \ Google font to import.
-  import-font: Amiko:wght@250
+  import-font: Open+Sans:wght@300
   \ Font to use in bubbles
-  bubble-font: 'Amiko', sans-serif
+  bubble-font: 'Open Sans', sans-serif
   \ Font Color & Background of bot bubble
   bubble-bot-color: #333
   bubble-bot-background: #f1f1f1 \ #FFF is pure white
@@ -107,7 +122,7 @@ idk: Sorry, could you rephrase your question?
   bubble-radius: 16
   bubble-font-size: 15
   \ Max Width of bot bubble, in pixels
-  bot-bubble-width: 270
+  bot-bubble-width: 280
   \ You can limit the number of responses displayed
   \ limit: 3
   
@@ -127,6 +142,13 @@ idk: Sorry, could you rephrase your question?
   thumbnail: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100
   
 ;
+
+
+
+
+
+
+
 
 
 
