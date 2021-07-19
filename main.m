@@ -39,14 +39,14 @@ include ./recommendation/event_question.m
 include ./topics/Menu/meal_import.m
 \ include ./topics/Menu/meal_import_2.m
 
-
-
-
+\ idkResponses List
+include ./topics/faq/faq_idk_responses_db.m
 
 Q: $_
-A: This question has been logged for further development. <br> <br> ${ "https://i.pinimg.com/736x/da/23/8d/da238dc3a982fa7dfa89055279f8fe96.jpg" image }
-L: idk last-question 
+A: ${ faqIdk1 } ; ${ faqIdk2 } ; ${ faqIdk3 } ; ${ faqIdk4 }
+L: idk ${ last-question}
 --
+
 
 idk: Sorry, could you rephrase your question?
 
@@ -83,7 +83,7 @@ idk: Sorry, could you rephrase your question?
 : publish 
   
   \ IMPORTANT - edit this part. It's the name of your bot.
-  publish: HRT_ChatBot
+  publish: LeRainbow_Chatbot_TeamPowerRangers_test
   
   \ What your bot says at first. 
   init: ${ intro }
@@ -137,22 +137,11 @@ idk: Sorry, could you rephrase your question?
 
   \ ----- PROPERTIES OF THE URL LINK FOR SOCIAL MEDIA --------
   \ These will be visible when you share the link to your bot.
-  title: Le Rainbow Assistant
-  description: Discover our menu and our services.
-  thumbnail: https://lerainbow.com.sg/wp-content/uploads/2020/10/lerainbowlogo-02.png
+  title: LeRainbow Chatbot TeamPowerRangers Test.ver
+  description: Chatbot for Le Rainbow Catering (Test.ver)
+  thumbnail: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100
   
 ;
-
-
-
-
-
-
-
-
-
-
-
 
 
 
