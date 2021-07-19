@@ -7,88 +7,105 @@
 \ A brief description of this program.
 \
 
-: testimonial-template { name organisation imgAddress description }
-    name ctx{ name }
-    organisation ctx{ organisation }
-    imgAddress ctx{ imgAddress }
-    description ctx{ description }
-    "Show me another" generalButton ctx{ nextBtn }
-    "Back to About Us" backButton ctx{ backBtn }
+mem: trackRecordPageNum
+    1 trackRecordPageNum!
+
+assoc: track-record-page-content
+
+: mk-track-record ( "s" "title" -- "s" ) { title imgAddress description pax }
+    title ctx{ title}
+    imgAddress ctx{ imgAddress}
+    description ctx{ description}
+    pax ctx{ pax}
     q{
     
-        <div style="text-align:center; padding:5px;">
-            <img style="width:auto;height:110px;" src=#{imgAddress}>
-            <h4 style="font-size: 15px;color:#53284e">#{name}</h4>
-            <h4 style="font-size: 12px;color:#53284e">#{organisation}</h4>
-            <p style="text-align:left">#{description}</p>
-            
-            <br>
-            #{nextBtn}
+        <div style="text-align:center;background-color:#e6dff0;padding:5px;border-radius:7px;">
+            <h4 style="font-size: 18px;color:#53284e">#{title}</h4>
+            <img style="width:200px;height:auto;" src=#{imgAddress}>
+            <p >#{description}</p>
+            <p ><b>#{pax}</b></p>
         </div>
-        
-        <br>
-        #{backBtn}
     }q
 ;
 
-: testimonial1
-    "Mr Perry Yeo & family" "1st Birthday Celebration" "https://lerainbow.com.sg/wp-content/uploads/2020/10/Testimonial-1.jpg" "We engaged Le Rainbow Catering for our Baby Lucas' 1st Birthday Celebration. It was an important event and we were glad Le Rainbow Catering had done a fantastic job! From the Mickey Mouse themed setup to the excellent service, everything was up to our high standards. We will definitely engage Le Rainbow Catering again!" testimonial-template ctx{ testimonial }
-    q{ 
-        #{testimonial}
-    }q
+: track-record ( "s" -- "s" )
+"Largest Buffet Catering" "https://sethlui.com/wp-content/uploads/2017/04/Savory-Kitchen-ONLINE-1.jpg?ezimgfmt=ng:webp/ngcb5" "SISPEC GRADUATION AUG 2019" "3,500 Pax" mk-track-record ctx{ track1 }
+"Largest BBQ Live-Cooking" "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1177886278%2Fx.jpg" "People’s Association HQ" "800 Pax" mk-track-record ctx{ track2 }
+"Next Page" backButton ctx{ nextPageBtn }
+"Back" backButton ctx{ backBtn }
+  q{
+    <h4 style="text-align:center;font-size:25px">Track record</h4>
+    <br>
+    #{track1}
+    <br>
+    #{track2}
+    <br>
+    #{nextPageBtn}
+    <br>
+    #{backBtn}
+  }q
+  
 ;
 
-: testimonial2
-    "Mr Gary Leow" "Sree Narayana Misson (SG)" "https://lerainbow.com.sg/wp-content/uploads/2021/04/logo-2019-e1617763837279.png" "I am quite impressed with your service and food quality. Ad hoc requests to cancel or amend quantity is always supported by Le Rainbow. Our residents like the variety and quantity is okay. Over the year we have given feedback and we are glad that it is taken well. Staff are especially keen on the hotdogs set and burger sets for a refreshing change of menu. Keep up the good work!" testimonial-template ctx{ testimonial }
-    q{ 
-        #{testimonial}
-    }q
+: track-record-page2 ( "s" -- "s" )
+"Largest Last Minute Order" "https://l.hdnux.com/350x235p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/d3cee4585b3446de94b72244afa12a8d.jpg" "Sungei Gedong Camp" "800 Pax (3hour)" mk-track-record ctx{ track3 }
+"Largest Packed Meal" "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-2020-10-23T153057.898.jpeg" "Changi Prison Cluster A" "6,300 Pax" mk-track-record ctx{ track4 }
+"Previous Page" backButton ctx{ previousPageBtn }
+"Next Page" backButton ctx{ nextPageBtn }
+"Back" backButton ctx{ backBtn }
+  q{
+    <h4 style="text-align:center;font-size:25px">Track record</h4>
+    <br>
+    #{track3}
+    <br>
+    #{track4}
+    <br>
+    #{previousPageBtn} #{nextPageBtn}
+    <br>
+    #{backBtn}
+  }q
+  
 ;
 
-: testimonial3
-    "Mr Wong & family" "Home Gathering Party" "https://lerainbow.com.sg/wp-content/uploads/2020/10/IMG_4143-1.jpg" "Le Rainbow did an outstanding job in catering for my home party. The layout is professionally done and the customer service is excellent. The feedback is very positive, highlighting the tasty dishes, wide varieties and generous portion. I would not hesitate to recommend Le Rainbow for important functions." testimonial-template ctx{ testimonial }
-    q{ 
-        #{testimonial}
-    }q
+
+: track-record-page3 ( "s" -- "s" )
+"Largest Continuous Order" "https://scontent.fsin9-2.fna.fbcdn.net/v/t1.6435-9/123446589_4961250193915447_5288204296137057160_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=a26aad&_nc_ohc=qAbzACVQNMcAX_TTV4m&_nc_ht=scontent.fsin9-2.fna&oh=b80fd827a67de51da8505015a8cf5489&oe=60EA3368" "Sports SG (Get Active SG 2019)" "15,000 Pax (1 mth)" mk-track-record ctx{ track5 }
+"Largest Order/Day" "https://lerainbow.com.sg/wp-content/uploads/2020/10/DSC_3365-2-300x200.jpg" "Aug, Year 2019" "78 Orders" mk-track-record ctx{ track6 }
+"Previous Page" backButton ctx{ previousPageBtn }
+"Back" backButton ctx{ backBtn }
+q{
+    <h4 style="text-align:center;font-size:25px">Track record</h4>
+    <br>
+    #{track5}
+    <br>
+    #{track6}
+    <br>
+    #{previousPageBtn}
+    <br>
+    #{backBtn}
+  }q
+  
 ;
 
-: testimonial4
-    "Ms Ng & family" "Baby 1st Month Celebration" "https://lerainbow.com.sg/wp-content/uploads/2020/10/IMG_5866-1.jpg" "The team from Le Rainbow was very professional and service oriented from the start. That made our Baby's first month celebration a breeze! We appreciate the way they customised a Western and Oriental themed Buffet with intricately done Canapes and live carving station. Our guests were full of compliments! Well done Le Rainbow Catering!" testimonial-template ctx{ testimonial }
-    q{ 
-        #{testimonial}
-    }q
-;
-
-: testimonial5
-    "Mr Alvin Lin" "Wedding" "https://lerainbow.com.sg/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-07-at-10.43.27-e1617763574118.jpeg" "We engaged Le Rainbow Catering for our wedding and we were very impressed by their service and the food. Special thanks to Faridah, who was very responsive to our needs all along and she gave us good advice and suggestions, even when our wedding plans were affected by Covid-19. We appreciate the team for going above and beyond in making our wedding special and memorable and our guests loved the packaging and the food." testimonial-template ctx{ testimonial }
-    q{ 
-        #{testimonial}
-    }q
-;
-
-: testimonial6
-    "Ms Sonia Zuzartee" "Aviva Asia" "https://lerainbow.com.sg/wp-content/uploads/2021/04/Aviva-e1617766753872.png" "Thank you for the catering for today’s event at Aviva. We received many compliments on the food. Thank you also to Swee Heng and his assistant for doing a great job setting up and clearing up too!" testimonial-template ctx{ testimonial }
-    q{ 
-        #{testimonial}
-    }q
-;
-
-assoc: testimonials_list
 {{
-   1 testimonial1
-   2 testimonial2
-   3 testimonial3
-   4 testimonial4
-   5 testimonial5
-   6 testimonial6
-}} +testimonials_list
-\ \\\\\\\
+    1 track-record
+    2 track-record-page2
+    3 track-record-page3
+    
+}} +track-record-page-content
 
+room: track-record-room
+Q: Why Le Rainbow
+Q: Back
+A: ${ why-lerainbow }
+K: -track-record-room
+--
 
-\ : testimonial-xxx
-\     "Mr" "Sree Narayana" "" "" testimonial-template ctx{ testimonial }
-\     q{ 
-\         #{testimonial}
-\     }q
-\ ;
+Q: Next Page
+A: +trackRecordPageNum % ${trackRecordPageNum track-record-page-content}
+--
 
+Q: Previous Page
+A: trackRecordPageNum 1 - trackRecordPageNum! % ${trackRecordPageNum track-record-page-content}
+--
+end-room
