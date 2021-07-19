@@ -8,9 +8,13 @@
 \
 
 include ./general_setting/button-css.m
-\ include ./general_setting/bubble-css.m
+include ./general_setting/bubble-css.m
 include ./general_setting/greetings.m
 include ./general_setting/bad-language.m
-include ./general_setting/email.m
+include ./general_setting/regex.m
+
+
+
+
 
 
