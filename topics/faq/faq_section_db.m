@@ -11,7 +11,7 @@
 \ == Events
 : faq-events
   "Back" backButton ctx{ servicesBtn }
-  "What types of events do you cater?" button ctx{ Btn }
+  "Events suitable for corporate sectors" button ctx{ Btn }
   "Do you cater multiple meals for all-day events?" button ctx{ Btn1 }
   "How many people can you cater to?" button ctx{ Btn2 }
   "Are there special services which can improve my event?" button ctx{ Btn3 }
@@ -100,7 +100,7 @@ q{
 }q
 ;
 
-Q: Our value-added services
+Q: value-add services
 Q: Value-Added Services
 A: ${ faq-valueadd }
 --
