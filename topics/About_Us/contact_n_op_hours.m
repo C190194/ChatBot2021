@@ -8,7 +8,7 @@
 \
 
 : contact-info-operating
-    "Back to About" backButton ctx{ backBtn }
+    "Back to About Us" backButton ctx{ backBtn }
     q{
         <h2>We're always in reach.</h2>
         <br>
@@ -36,4 +36,3 @@
         #{backBtn}
     }q
 ;
-
