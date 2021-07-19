@@ -11,7 +11,7 @@
 : faq-explore
   "What events are you able to support?" button ctx{ generalBtn }
   "Food options and customisation" button ctx{ menuBtn }
-  "Our value-added services" button ctx{ addOnBtn }
+  "Our value-add services" button ctx{ addOnBtn }
   "What is the order and delivery process?" button ctx{ orderDeliveryBtn }
   "How do I pay?" button ctx{ paymentBtn }
   "Send us a message" faqMenuButton ctx{ inquiryBtn }
@@ -37,7 +37,7 @@ q{
 
 \ Our inquiries message
 : faq-inquiries-msg
-  "Back to Our Services" backButton ctx{ backBtn }
+  "Back to Home" backButton ctx{ backBtn }
   "Contact Us" faqMenuButton ctx{ contactInfoBtn }
 q{
     <h2>How can we help? 😃</h2>
@@ -52,7 +52,7 @@ q{
     <br><br>
     
     <h3>Didn't mean to send a message?</h3>
-    <br>
+    
     #{backBtn}
 
 }q
@@ -82,7 +82,7 @@ Q: Send a message
 Q: Send us a message
 Q: Inquiries
 A: ${ faq-inquiries-msg }
-K: -services_faq services_inquiries
+K: $clear services_inquiries
 --
 
 \ Q: Back to Home
@@ -107,3 +107,13 @@ Q: Contact Us
 A: ${ faq-contact }
 K: -services_inquiries
 --
+
+
+
+
+
+
+
+
+
+
