@@ -31,12 +31,12 @@ mem: testimonial_cnt
 
 room: aboutus-room
 \ Navigation
-Q: Back to Main
-A: ${ intro }
-K: $clear
---
+\ Q: Back to Main
+\ A: ${ intro }
+\ K: $clear
+\ --
 
-Q: Back to About
+Q: Back to About Us
 A: ${ about }
 --
 
@@ -59,7 +59,7 @@ A: ${ social-media-facebook }
 --
 
 \ Testimonials looper
-Q: Hear from satisfied customers
+Q: Hear from our customers
 Q: Show me another
 A: ${ testimonial_cnt testimonials_list }
 C: testimonial_cnt 6 <= % testimonial_cnt 1+ testimonial_cnt!
@@ -99,5 +99,4 @@ end-room
 \ Q: Food Certification
 \ A: Our brand is certified by Association of Catering Professionals Singapore and Majlis Ugama Islam Singapura.
 \ --
-
 
