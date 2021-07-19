@@ -29,7 +29,7 @@ A: Yes, we can provide full day meals (breakfast, lunch, tea break, dinner) and 
 --
 
 Q: How many people can you cater to
-A: We have catered to events anywhere from 10 pax (mini buffet) to 3500 pax. Please leave your contact details or contact us directly so we can better help you to plan your meal needs.
+A: We have catered to events anywhere from 20 pax (mini buffet) to 3500 pax. Please leave your contact details or contact us directly so we can better help you to plan your meal needs.
 --
 
 Q: Are there special services which can improve my event
@@ -40,8 +40,8 @@ Q: Amount of space required for the buffet setup
 A: The number of tables used for the set-up will depend on the number of pax ordered. Normally, there would be 4-5 tables, taking up 15 feet by 3 feet. Do advise on the space availability when you place your order and our sales associates will accommodate as much as we can.
 --
 
-Q: What types of events do you cater
-A: We do anything from buffet reception to bento lunches. We have supported events such as seminars, training programs, company cohesion activities, company anniversary, festival celebration and even daily staff meals.
+Q: Events suitable for corporate sectors
+A: We do anything from buffet reception to bento lunches. Our meals are suitable for events such as seminars, training programs, company cohesion activities, company anniversary, festival celebration and even daily staff meals.
 --
 
 
