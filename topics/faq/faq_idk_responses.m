@@ -34,9 +34,8 @@ q{
 : faqIdk4
 "Send a message" generalButton ctx{ inquiryBtn }
 q{
-  <h3>Sorry, I'm not sure 🤔. Try asking another question, or contact us below!</h3>
+  <h3>Sorry, I'm not sure.🤔 Try asking another question, or contact us below!</h3>
   #{inquiryBtn}
 }q
 ;
-
 
