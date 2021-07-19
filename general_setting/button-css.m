@@ -55,6 +55,7 @@
 
 : backButton ( "s" -- "s" )
   q{ 
+	border: none;
 	color:#FFF;
 	background:#42ddf5;
 	font-size:15px;
