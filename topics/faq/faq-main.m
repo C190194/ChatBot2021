@@ -17,32 +17,39 @@ include ./topics/faq/faq_css.m
 \ Room controller
 include ./topics/faq/faq_room_controller.m
 
-
 room: services_faq
 
-    \ Questions List
-    include ./topics/faq/faq_question_db.m
+\ Questions List
+include ./topics/faq/faq_question_db.m
 
-    \ FAQ Sections
-    include ./topics/faq/faq_section_db.m
+\ FAQ Sections
+include ./topics/faq/faq_section_db.m
 
-    \ idkResponses List
-    include ./topics/faq/faq_idk_responses_db.m
 
-    \ Go back from any of the faq topics
-    Q: Back
-    A: ${ faq-explore }
-    --
 
-    Q: $_
-    A: ${ faqIdk1 } ; ${ faqIdk2 } ; ${ faqIdk3 } ; ${ faqIdk4 }
-    L: idk faq last-question
-    --
+\ Go back from any of the faq topics
+Q: Back
+A: ${ faq-explore }
+--
+
 
 end-room
 
 
 \ Inquiries
 room: services_inquiries
-    include ./topics/faq/faq_inquiries.m
+include ./topics/faq/faq_inquiries.m
 end-room
+
+\ Room control for Our Services bot
+\ Q: Our Services
+\ A: ${ faq-welcome }
+\ K: services_faq
+\ --
+
+
+
+
+
+
+
