@@ -1,0 +1,46 @@
+\
+\ Copyright © 2021 huangrt all rights reserved.
+\
+\ @author: huangrt
+\ @date: 10 Jun 2021
+\
+\ A brief description of this program.
+\
+
+\ include ./topics/Menu/wedding/Wedding_Reception/Beaute_text.m
+
+room: Beaute_recom
+
+Q: save
+C: "Le Beaute Wedding Buffet" +set
+C: initialize_personal_info
+A: info-asked 1 = % Okay! Added Le Beaute Wedding Buffet to your favourites
+A: name #empty? % Okay! Added Le Beaute Wedding Buffet to your favourites ${ bb } ${ask-permission}
+A: Okay! Added Le Beaute Wedding Buffet to your favourites ${ bb } ${ask-update}
+K: name #empty? % waiting-for-permission
+\ K: name #empty? not % waiting-for-update
+--
+
+Q: remove 
+C: "Le Beaute Wedding Buffet" -set
+A: Okay! Removed Le Beaute Wedding Buffet from your favourites
+--
+
+Q: not_now
+A: Okay
+--
+
+Q: back
+A: recom #empty? % ${ homepage }
+A: ${ recom display return_recom_menu }
+K: $back
+--
+
+end-room
+
+Q: Beaute
+A: ${ Beaute_intro }
+K: Beaute_recom
+--
+
+
