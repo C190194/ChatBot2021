@@ -13,7 +13,7 @@
     imgAddress ctx{ imgAddress }
     description ctx{ description }
     "Show me another" generalButton ctx{ nextBtn }
-    "Back to About" backButton ctx{ backBtn }
+    "Back to About Us" backButton ctx{ backBtn }
     q{
     
         <div style="text-align:center; padding:5px;">
@@ -91,6 +91,4 @@ assoc: testimonials_list
 \         #{testimonial}
 \     }q
 \ ;
-
-
 
