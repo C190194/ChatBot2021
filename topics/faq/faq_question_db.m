@@ -7,18 +7,27 @@
 \ A brief description of this program.
 \
 
+: link ( "txt" "url" — "s" ) 
+   ctx{ txt url } 
+   q{ 
+       <a href="#{url}" target="_blank">
+           #{txt}
+        </a>
+     }q
+;
 
-@: faq-whatis faq-howmuch
+@: faq-whatis faq-howmuch faq-contain
 faq-whatis: what_is_a tell_me_about explain
 faq-howmuch: how_much price cost
+faq-contain: contain|contains have include has had
 
 @: faq-valueAddServices faq-food
 faq-valueAddServices: cocktail_canape wedding_decoration|wedding_decor live_station|chef_station
-faq-food: bento mini_feast buffet|buffet_package wedding
+faq-food: bento|bento_box mini_feast buffet|buffet_package wedding
 
 @: faq-change faq-fooditems
 faq-change: change swap substitute replace upgrade remove
-faq-fooditems: food_items side_dish sides food course
+faq-fooditems: food_items side_dish sides food course menu
 
 
 
@@ -63,6 +72,10 @@ Q: What are the delivery charges
 A: Delivery charges are ${ "$50" }for regular buffets, and ${ "$30" }for takeaway sets. Separate delivery fees may also be applied for live stations and weddings.
 --
 
+Q: What time are you available to deliver
+A: We deliver throughout the day. Our first delivery will be 7:30am and last delivery at 6:30pm.
+--
+
 Q: What time will the collection be
 A: Collection time will be 4 hours after arrival. Additional hours are chargeable per hour.
 --
@@ -88,37 +101,6 @@ A: We will be glad to assist you with that. Our customer service associates will
 
 \ -------------------------------------------------------------------------------------------------
 \   Pricing
-Q: $faq-howmuch is|of $faq-valueAddServices
-A: Please discuss this with our customer sales and we can help you better. ${ "Send a message" generalButton }
---
-
-Q: $faq-howmuch is|of $faq-food
-A: Visit our menu browser [here weblink or display the menu/recommendation chooser]
---
-
-\ -------------------------------------------------------------------------------------------------
-\   "Menu Questions"
-\ Q: What is a Bento meal
-Q: $faq-whatis Bento meal
-A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-35-450x388.jpeg" image } Bento meal is an wholesome packaged meal suitable for mass distribution. The packaging ranges from standard to premium boxes, so do indicate your preference when making your order. We can also provide daily meals with customised menus for your organisation.
---
-
-\ Q: What is a Mini Buffet
-Q: $faq-whatis Mini Buffet
-A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-31-450x388.jpeg" image } Mini buffet is a mini-sized package without any tables to set-up. Food is packed, providing easy dining for up to 20 people. Food available is similar to our other buffet packages, but do get your own drinks.
---
-
-\ Q: What is a Buffet Package
-Q: $faq-whatis Buffet
-A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-2020-10-23T140551.322.jpeg" image } Buffet package gives the full buffet experience! We can suit any theme. There are also many available add-ons to make your buffet event stand out from the rest, such as service staff, live station (chef station), and Cocktail Canape. Interested? Find out more below. ${ "Our Value-Added Services" button }
---
-
-
-
-\ Q: Can I change or swap food items
-Q: $faq-change $faq-fooditems
-A: You can change or swap food items as part of our customised menu. Do let us know how we may help you at least 3 days before the day of the event.
---
 
 Q: Should I order more food
 A: Generally, you should order 10-15% more than the number of pax expected (for buffet) to ensure that everyone will have sufficient food even if some people take second servings.
@@ -135,6 +117,48 @@ A: Our food is best consumed within 4 hours of arrival.
 
 \ -------------------------------------------------------------------------------------------------
 \   "Add-on Services"
+
+
+Q: Is there last minute order amendment available
+A: Yes, we are flexible in adapting to last minute changes as far as possible. Depending on resource availability, we would be glad to accommodate your needs.
+--
+
+
+\ -------------------------------------------------------------------------------------------------
+\ Questions with wildcards
+
+\   Pricing
+Q: $faq-howmuch is|of $faq-valueAddServices
+A: Please discuss this with our customer sales and we can help you better. ${ "Send a message" generalButton }
+--
+
+Q: $faq-howmuch is|of $faq-food
+A: View our menu${ "on our website" "https://www.lerainbow.com.sg/menus/" link }or go to our menu explorer. ${ "To Menu Explorer" generalButton }
+--
+
+
+\ Q: Can I change or swap food items
+Q: $faq-change $faq-fooditems
+A: You can change or swap food items as part of our customised menu. Do let us know how we may help you at least 3 days before the day of the event.
+--
+
+\   "Menu Questions"
+\ Q: What is a Bento meal
+Q: $faq-whatis Bento meal
+A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-35-450x388.jpeg" image } Bento meal is an wholesome packaged meal suitable for mass distribution. The packaging ranges from standard to premium boxes, so do indicate your preference when making your order. We can also provide daily meals with customised menus for your organisation.
+--
+
+\ Q: What is a Mini Buffet
+Q: $faq-whatis Mini Buffet
+A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-31-450x388.jpeg" image } Mini buffet is a mini-sized package without any tables to set-up. Food is packed, providing easy dining for up to 20 people. Food available is similar to our other buffet packages, but do get your own drinks.
+--
+
+\ Q: What is a Buffet Package
+Q: $faq-whatis Buffet
+A: ${ "https://lerainbow.com.sg/wp-content/uploads/2020/10/image_mod-2020-10-23T140551.322.jpeg" image } Buffet package gives the full buffet experience! We can suit any theme. Note that due to COVID-19, we are not allowed to cater a buffet. Do check out our bento meals and mini feasts instead. There are also many available add-ons to make your buffet event stand out from the rest, such as service staff, live station (chef station), and Cocktail Canape. Interested? Find out more below. ${ "Our Value-Added Services" button }
+--
+
+\   "Add-on Services"
 Q: Want to add some beautiful bites
 Q: $faq-whatis Cocktail Canape
 Q: Cocktail Canape
@@ -149,14 +173,27 @@ A: ${ "https://lerainbow.com.sg/wp-content/uploads/2021/04/LR-Wedding-Page-Image
 
 Q: Is there food tasting
 Q: $faq-whatis Food tasting
-A: Food tasting session is available on request, subject to our T&Cs. We promise that you will be fully satisfied with our food.
+A: ${ "https://lerainbow.com.sg/wp-content/uploads/2021/04/homemade-delicious-pilaf-with-chicken-fresh-parsley-ripe-vegetables-pan-lunch_122732-1316-450x417.jpg" image } Food tasting session is available on request, subject to our T&Cs. We promise that you will be fully satisfied with our food.
 --
 
 Q: Can we arrange a site visit
 Q: $faq-whatis Site visit
-A: Site visit is another initiative that we extend to you (our clients) to understand our process. We hope to build a long-term partnership based on trust and quality, and nothing less.
+A: ${ "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9oKKFZD5pVA8u_LFcNIKv2DPnUBw3rzSPWQ&usqp=CAU" image } Site visit is another initiative that we extend to you to understand our process. Pictured above is our Shimei East kitchen. We hope to build a long-term partnership based on trust and quality, and nothing less.
 --
 
-Q: Is there last minute order amendment available
-A: Yes, we are flexible in adapting to last minute changes as far as possible. Depending on resource availability, we would be glad to accommodate your needs.
+Q: Halal
+Q: $faq-food Halal
+Q: $faq-fooditems Halal
+A: Yes, ALL our food is certified by MUIS. We are able to display our certification with our food if required, so do let us know.
+--
+
+Q: Vegetarian
+Q: $faq-food Vegetarian
+Q: $faq-fooditems Vegetarian
+A: We accommodate vegetarians by having a customisable menu! If the vegetarian quantity you require is less than 20, you will have the chef's choice vegetarian set-of-the-day. If there are more, we can customise a vegetarian menu with you! Do let our customer sales team know!
+--
+
+Q: $faq-food $faq-contain beef
+Q: $faq-fooditems $faq-contain beef
+A: Some of our menu items contain beef. They are clearly labelled. Simply select the options as desired. 
 --
